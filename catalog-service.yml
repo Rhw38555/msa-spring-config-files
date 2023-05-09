@@ -1,0 +1,2 @@
+kafka:
+  host: kafka:9092
