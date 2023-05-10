@@ -1,10 +1,9 @@
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password: '{cipher}AQCRo+DhKxCk3HjfcQFVcPeXr4Tnj0bJNLMICiDdIIAPJ/StVn/y4nkYoHpoXr0uXpO+zOtwUIWGW3tbLt6Tu4R7Y3yyppJNucTIlhrTJPyIt1nJiuy1EhSqAqhAee6IE//o+ahrHGyJdeitskT0qxSkZ2ZYfbh34t7zON/3VF0f1hTfF+8xOO7SW2UAWYc/HocYHTe5bXFi15oT2Qd+sZbGy7VEKZ7CInLQgbG3QcwVUZXip2kra/ywMD7+N4MhQ82g+PH+c/3YSE0bSFOTkZ/mkYHgNawfANrRDGx1cXTAly27/aHnqRZucNpR8QG5ToxDSm8PIl+Uvd0skMvhW3s+rv8b1fKs4bhWTFk9D7ICl6B7o6JogKp9jeVcQwhG7Ok=' # 암호화 된 문자 명시
-
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/mydb
+    username: root
+    password: '{cipher}AQBibGb2+cmzRCKJOk+J3QlC5VKUrXoKeKBiSYbL/t5CeVURNcVB2s4nC9gkDEgPYHQByEVaI8Brr8S6dnc2/DFfsmcJIc+MqDAYQmPnHSTwAvBly1wKHfWpKPXr+Cd+tG/FxSKGqb0Fj71YK8sWJYQGcP00Jn8dRbKs7QinAjNfJdXWoTlU/1OXti5XH9JhwYq8aSEY2VwcbsZlLOSneorjGl5xcpAG53ZiJ3VmnSD2ndeMjnCyhiVdoKoUIr6jilgPMz2MuErEmuuUl5VKaHY3PC79j6N96/VWMheZ9fIYNQf7x8WYObtA491nuvCcSF3+HzyO47vXfujYuxwRsHJYNeyvLOKIfxJViqgeiI27s0s93sZgZGXCBQcItQI9TCQ='
 token:
   expiration_time: 86400000
   secret: '{cipher}AQBspJnRyATMJGCDOfP9YtdfjUFTLhcWpx7oLO6Z0P9ZsgkDvdRNFnT2QoeaVBiNzDYnhqOafA8uMsOuYfy9hEQWqydNEW/AgCdW8dgAoJPZgH1oHmbARdrXT59dPuzRPE28uK1jgI1V6fIZytN/JSgZ/xu6Uq5h1I+KO6dzxTDuQO0qbrM4nggQ1heKpIUSw67WHGAKK1p7sjHXxjGa2+L9cWz1RCybqGhvmqUz31h0Cz4I68QeBZ2dNpBZOyu8Vo5WtmVM9MIvgadx5IwYwsT1Ry/Zegab/bKtKzqbW5BQO8kH5umwedp20VuFYx7a6uFuwG696hWIHsNH/33z2NZdO4ULHbWcN2TxzItiBgK16cG+57lmVZ/x+w9wgd0eOGA='
@@ -13,6 +12,6 @@ gateway:
   ip: apigateway-service
 
 order_service:
-  url: http://127.0.0.1:8000/order-service/%s/orders
+  url: http://apigateway-service:8000/order-service/%s/orders
   exception: 
     orders_is_empty: User's order is empty.
