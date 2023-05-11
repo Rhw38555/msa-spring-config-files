@@ -4,6 +4,6 @@ kafka:
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://user-service-mariadb:3306/mydb
+    url: jdbc:mariadb://order-service-mariadb:3306/mydb
     username: root
     password: '{cipher}AQBibGb2+cmzRCKJOk+J3QlC5VKUrXoKeKBiSYbL/t5CeVURNcVB2s4nC9gkDEgPYHQByEVaI8Brr8S6dnc2/DFfsmcJIc+MqDAYQmPnHSTwAvBly1wKHfWpKPXr+Cd+tG/FxSKGqb0Fj71YK8sWJYQGcP00Jn8dRbKs7QinAjNfJdXWoTlU/1OXti5XH9JhwYq8aSEY2VwcbsZlLOSneorjGl5xcpAG53ZiJ3VmnSD2ndeMjnCyhiVdoKoUIr6jilgPMz2MuErEmuuUl5VKaHY3PC79j6N96/VWMheZ9fIYNQf7x8WYObtA491nuvCcSF3+HzyO47vXfujYuxwRsHJYNeyvLOKIfxJViqgeiI27s0s93sZgZGXCBQcItQI9TCQ='
